@@ -1,0 +1,25 @@
+{
+  "name": "config-loader",
+  "version": "1.0.0",
+  "description": "Simple utility to load configuration data from a directory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive --reporter spec --bail --compilers jsx:babel/register,js:babel/register"
+  },
+  "keywords": [
+    "config",
+    "loader"
+  ],
+  "author": "Aaron Larner",
+  "license": "ISC",
+  "dependencies": {
+    "include-all": "^0.1.6",
+    "lodash.assign": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "chai": "^3.4.0",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.2"
+  }
+}
