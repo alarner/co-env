@@ -1,5 +1,5 @@
 var includeAll = require('include-all');
-var assign = require('lodash.assign');
+var merge = require('lodash.merge');
 module.exports = function(path) {
 	var config = includeAll({
 		dirname: path,
@@ -15,11 +15,11 @@ module.exports = function(path) {
 	}
 
 	if(env && env.hasOwnProperty(process.env.NODE_ENV)) {
-		assign(config, env[process.env.NODE_ENV]);
+		merge(config, env[process.env.NODE_ENV]);
 	}
 
 	if(local) {
-		assign(config, local);
+		merge(config, local);
 	}
 	return config;
 };

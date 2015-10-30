@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "include-all": "^0.1.6",
-    "lodash.assign": "^3.2.0"
+    "lodash.merge": "^3.3.2"
   },
   "devDependencies": {
     "babel": "^5.8.29",

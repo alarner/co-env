@@ -24,4 +24,8 @@ describe('config-loader', function() {
 		expect(config.database.development.client).to.equal('postgresql');
 		expect(config.database.development.directory).to.equal('./seeds/development');
 	});
+	it('should merge overrides, not completely overwrite them', function() {
+		var config = configLoader(path.join(__dirname, '../fixtures/config1'));
+		expect(config.database.development.connection.host).not.to.be.undefined;
+	});
 })
