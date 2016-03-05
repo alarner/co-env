@@ -28,4 +28,9 @@ describe('config-loader', function() {
 		var config = configLoader(path.join(__dirname, '../fixtures/config1'));
 		expect(config.database.development.connection.host).not.to.be.undefined;
 	});
+	it('should overwrite strings if they were an object before', function() {
+		var config = configLoader(path.join(__dirname, '../fixtures/config1'));
+		expect(config.session.store).to.equal('http://google.com');
+		expect(config.session.foo).to.equal('string');
+	});
 })

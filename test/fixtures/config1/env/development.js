@@ -6,5 +6,8 @@ module.exports = {
 		development: {
 			client: 'postgres'
 		}
+	},
+	session: {
+		foo: 'string'
 	}
 }

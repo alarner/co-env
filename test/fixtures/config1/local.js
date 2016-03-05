@@ -4,5 +4,8 @@ module.exports = {
 			client: 'postgresql',
 			directory: './seeds/development'
 		}
+	},
+	session: {
+		store: 'http://google.com'
 	}
 }
