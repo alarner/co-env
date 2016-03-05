@@ -1,6 +1,6 @@
 {
   "name": "config-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple utility to load configuration data from a directory.",
   "main": "index.js",
   "scripts": {
