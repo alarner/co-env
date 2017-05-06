@@ -33,4 +33,8 @@ describe('config-loader', function() {
 		expect(config.session.store).to.equal('http://google.com');
 		expect(config.session.foo).to.equal('string');
 	});
+	it('should use the passed in environment if there is one', function() {
+		var config = configLoader(path.join(__dirname, '../fixtures/config1'), 'test');
+		expect(config.webserver.baseUrl).to.equal('http://localhost:3002');
+	});
 })

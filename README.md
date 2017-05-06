@@ -54,6 +54,8 @@ module.exports = {
 
 The above development.js file would override the baseUrl property in your webserver.js file to be `'http://localhost:3000'` but only when you are running under your development environment.
 
+> **Pro Tip:** You can also force a specific environment to be loaded from your code by pasing in the name of that environment as the second parameter of the configLoader function call. For example: `var config = configLoader(path.join(__dirname, './config'), 'test');` will force the `test` environment to be used.
+
 #### local.js
 
 The `local.js` file in the root of your config directory acts as an ultimate override for your config object. It will be applied after any defaults and environment specific configs are applied, and override any values that conflict. For example, if you wanted to override your database configurations settings for your specific machine (not every single machine running under a development environment) you could use a local.js file to apply these configuration changes. The `local.js` file should be added to the `.gitignore` file.

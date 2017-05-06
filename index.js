@@ -1,6 +1,6 @@
 var includeAll = require('include-all');
 var merge = require('lodash.merge');
-module.exports = function(path) {
+module.exports = function(path, useEnv) {
 	var config = includeAll({
 		dirname: path,
 		filter:  /(.+)\.js$/
@@ -14,8 +14,10 @@ module.exports = function(path) {
 		delete config.env;
 	}
 
-	if(env && env.hasOwnProperty(process.env.NODE_ENV)) {
-		merge(config, env[process.env.NODE_ENV]);
+	useEnv = useEnv || process.env.NODE_ENV;
+
+	if(env && env.hasOwnProperty(useEnv)) {
+		merge(config, env[useEnv]);
 	}
 
 	if(local) {
