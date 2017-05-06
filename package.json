@@ -1,7 +1,7 @@
 {
-  "name": "config-loader",
+  "name": "co-env",
   "version": "1.1.0",
-  "description": "Simple utility to load configuration data from a directory.",
+  "description": "Simple utility to load configuration data from a directory based on the current environment.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive --reporter spec --bail --compilers jsx:babel/register,js:babel/register"
@@ -11,7 +11,7 @@
     "loader"
   ],
   "author": "Aaron Larner",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "include-all": "^0.1.6",
     "lodash.merge": "^3.3.2"

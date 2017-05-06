@@ -1,13 +1,13 @@
-# Config Loader
+# co-env
 
-Config Loader is a simple utility to load configuration data from a directory.
+co-env is a simple utility to load configuration data from a directory.
 
 ### Example:
 
-To install with npm: `npm install --save alarner/config-loader`
+To install with npm: `npm install --save co-env`
 
 ```js
-var configLoader = require('config-loader');
+var configLoader = require('co-env');
 var path = require('path');
 var config = configLoader(path.join(__dirname, './config'));
 
