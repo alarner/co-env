@@ -1,6 +1,6 @@
 var includeAll = require('include-all');
 var merge = require('lodash.merge');
-module.exports = function(path, useEnv) {
+module.exports = function(path, useEnv, ignoreLocalOverride) {
 	var config = includeAll({
 		dirname: path,
 		filter:  /(.+)\.js$/
@@ -20,7 +20,7 @@ module.exports = function(path, useEnv) {
 		merge(config, env[useEnv]);
 	}
 
-	if(local) {
+	if(local && !ignoreLocalOverride) {
 		merge(config, local);
 	}
 	return config;

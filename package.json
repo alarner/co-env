@@ -4,7 +4,7 @@
   "description": "Simple utility to load configuration data from a directory based on the current environment.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive --reporter spec --bail --compilers jsx:babel/register,js:babel/register"
+    "test": "mocha --recursive"
   },
   "keywords": [
     "config",
@@ -14,12 +14,12 @@
   "license": "MIT",
   "dependencies": {
     "include-all": "^0.1.6",
-    "lodash.merge": "^3.3.2"
+    "lodash.merge": "^4.6.0"
   },
   "devDependencies": {
-    "babel": "^5.8.29",
-    "chai": "^3.4.0",
-    "mocha": "^2.3.3",
-    "sinon": "^1.17.2"
+    "babel": "^6.23.0",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.8"
   }
 }
